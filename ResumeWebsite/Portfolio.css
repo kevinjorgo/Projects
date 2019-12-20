@@ -1,0 +1,48 @@
+.fa {
+  font-size: 30px;
+  width: 30px;
+  text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+    
+.fa-facebook {
+  position:absolute;
+  bottom: 15px;
+  right:190px;
+  color: white;
+}
+
+.fa-twitter {
+  position:absolute;
+  bottom: 15px;
+  right:150px;
+  color: white;
+}
+.fa-linkedin {
+  position:absolute;
+  bottom: 15px;
+  right:105px;
+  color: white;
+}
+
+.fa-instagram {
+  position:absolute;
+  bottom: 15px;
+  right:60px;
+  color: white;
+}
+.fa-reddit {
+  position:absolute;
+  bottom: 15px;
+  right:15px;
+
+  color: white;
+}
+
+html {
+  height:100%;
+  background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);
+}

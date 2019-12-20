@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html >
+   <head>
+     <meta charset="utf-8">
+      <title>Translate</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="translate.css" rel = "stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+h1{
+  text-align: center;
+  background: linear-gradient(to right, orange,red , yellow,  cyan, blue, violet);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ font-size: 60px;
+ line-height: normal;
+}
+</style>
+      <script type="text/javascript">
+      var opacity=0
+      var intervalID = 0;
+      var speed=0;
+      var intensity=0;
+
+      function fadeOut(){
+        intervalID = setInterval(hide, 90);
+
+      }
+
+      setTimeout(function(){
+        //window.location.reload(1);
+      }, 15000);
+
+      function hide(){
+        var img = document.getElementById("img1");
+        opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        if(opacity>0){
+          opacity = opacity-0.1;
+          img.style.opacity = opacity;
+        }
+        else{
+          clearInterval(intervalID);
+        }
+      }
+
+      function fadeIn(){
+        intervalID = setInterval(show, 90);
+
+      }
+
+      function show(){
+        var img = document.getElementById("img1");
+        opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        if(opacity<1){
+          opacity = opacity+0.1;
+          img.style.opacity = opacity;
+        }
+        else{
+          clearInterval(intervalID);
+        }
+      }
+
+
+
+
+      </script>
+
+   </head>
+
+   <body>
+
+     <div class="container2">
+     <div class="hero">
+     <img src="https://static1.squarespace.com/static/55b29a49e4b09c3257c5ea98/585addd22e69cf2bd55495ee/585adebdbe6594756922a1df/1482350271618/google-logo-icon-PNG-Transparent-Background.png" alt="Treadmill" class="center">
+
+     <!--
+     <button onclick="fadeOut()" id ="btnAdd"> Fade Out </button>
+     <img id ="img1"  id="img1" src="https://www.queensu.ca/sites/default/files/assets/pages/QueensLogo_colour.png" width="250px"/>
+     <button onclick="fadeIn()" id ="btnAdd"> Fade In </button>
+    -->
+
+     <script src="/__/firebase/5.8.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
+
+      <script>
+        // Initialize Firebase
+        var notfirsttime = false;
+        var config = {
+          apiKey: "AIzaSyBwhXpbmXl230VMVUOJhfllWfoXgOMt0CA",
+          authDomain: "treadmill-cc682.firebaseapp.com",
+          databaseURL: "https://greenrun3-41052.firebaseio.com/",
+          projectId: "greenrun3-41052",
+          storageBucket: "treadmill-cc682.appspot.com",
+          messagingSenderId: "170385855115"
+        };
+        firebase.initializeApp(config);
+
+
+        function writeUserData(name, name1) {
+          firebase.database().ref('values/').set({
+          intensity: "\""+name+"\"",
+          incline: "\""+name1+"\""
+        });
+        }
+
+          database = firebase.database();
+          var ref = database.ref('values/speech');
+          ref.on('value', gotData, errData);
+
+
+          function gotData(data){
+            if(notfirsttime){
+              console.log(data.val());
+              var node = document.createElement("p");                 // Create a <li> node
+              var textnode = document.createTextNode(data.val());         // Create a text node
+              node.appendChild(textnode);
+              document.getElementById("myText").appendChild(node);
+            }
+            notfirsttime = true;
+          }
+          function errData(err){
+            console.log('err');
+            console.log(err);
+          }
+
+
+
+        </script>
+        <footer>
+        <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/Twitter" target="_blank" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/kevin-jorgo/" target="_blank" class="fa fa-linkedin"></a>
+        <a href="https://www.reddit.com/" target="_blank" class="fa fa-reddit"></a>
+      </footer>
+
+      <nav>
+      <ul>
+        <li>
+          <a href="translate.html">Home</a>
+        </li>
+        <li>
+          <a href="translate.html">About</a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+
+
+          <h1>Kevin Jorgo</h1>
+          <h1> <span id="myText"></span></h1>
+
+          <h1 id="string" ></h1>
+
+     </div>
+     <div class="hero123">
+
+     </div>
+     <div class="page3">
+
+     </div>
+     </div>
+   </body>
+
+</html>

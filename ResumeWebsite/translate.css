@@ -1,0 +1,259 @@
+.container2{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+
+}
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+
+}
+
+.button2 {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+
+}
+
+.button2:hover {background-color: #ff0000}
+
+.button2:active {
+  background-color: #ff0000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.start, .end {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  display: block;
+}
+
+
+.center {
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width:25%;
+}
+
+.center1 {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.btn-toolbar{
+  font-size: 20px;
+  width: 55%;
+
+  /*background-color: #4CAF50; /* Green */
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: auto;
+
+}
+.btn-secondary {
+  padding: 15% 25%;
+  border:none;
+  float: left;
+
+}
+
+
+.rightborder {
+
+border-top-right-radius: 15%;
+border-bottom-right-radius: 15%;
+
+}
+
+.leftborder {
+
+border-top-left-radius: 15%;
+border-bottom-left-radius: 15%;
+
+}
+
+body{
+  margin: 0;
+  background:#333;
+}
+
+.hero{
+  width: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(rgba(0,50,0,0.7),rgba(0,50,0,0.7)), url("../images/sky1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+
+.hero123{
+  width: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(rgba(0,0,50,0.7),rgba(0,0,50,0.7)), url("../images/cool.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+.page3{
+  width: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(rgba(0,0,50,0.7),rgba(0,0,50,0.7)), url("../images/retro.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+
+.fade-in{
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+.fade-out{
+  animation: fadeOut 5s;
+}
+
+@keyframes fadeOut {
+  from{
+    opacity:1;
+  }
+  to{
+    opacity:0;
+  }
+}
+
+.fa {
+
+  font-size: 30px;
+  width: 30px;
+  text-decoration: none;
+
+}
+.fa:hover {
+    opacity: 0.7;
+
+}
+
+.fa-facebook {
+  position:absolute;
+  bottom: 15px;
+  right:190px;
+  color: white;
+}
+
+.fa-twitter {
+  position:absolute;
+  bottom: 15px;
+  right:150px;
+  color: white;
+}
+.fa-linkedin {
+  position:absolute;
+  bottom: 15px;
+  right:105px;
+  color: white;
+}
+
+.fa-instagram {
+  position:absolute;
+  bottom: 15px;
+  right:60px;
+  color: white;
+}
+.fa-reddit {
+  position:absolute;
+  bottom: 15px;
+  right:15px;
+
+  color: white;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html {
+  height:100%;
+  background-image: linear-gradient(to right top, #8e44ad 0%, #3498db 100%);
+}
+
+nav {
+  max-width: 960px;
+  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+nav ul {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 18px;
+  font-family: "Calabria";
+  text-transform:uppercase;
+  color: rgba(0, 35, 122, 0.5);
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 35, 122, 0.7);
+}
